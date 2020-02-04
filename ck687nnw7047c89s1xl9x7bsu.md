@@ -107,6 +107,7 @@ RUN npm install
 EXPOSE 8080
 ENTRYPOINT ["node","./app.js"]
 ```
+
 # Running an image as a Container
 
 1. First build the image
