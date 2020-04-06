@@ -1,4 +1,4 @@
-## How to speed up your next js app (ssr) using GZip
+## How to speed up your next js app using GZip
 
 Recently I was working on one of my projects built using nextjs . I was using semantic UI library. Even the minified version is too big for production. (631kb)  It was making my web app slow.  I searched through the internet for ways to reduce the size. Then I found out about gzip. I can encode my web app using gzip which reduced the size of the app significantly. Let’s see how to do it.
 
