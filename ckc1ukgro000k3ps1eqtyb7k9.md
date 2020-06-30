@@ -52,6 +52,8 @@ http.createServer(function (req, res) {
 👉🏻 pm2 start [pm2 is process manager for nodejs. you can replace it with npm start also ]
 > Note: git pull will ask for username and password.The prompt should not come thats our motive here. You need to either use ssh or use ```git config credential.helper store```. Check this out [here](https://stackoverflow.com/a/51327559/8461016).I am using credential store as i am the only one accessing that server. 
 
+Now start the script using node or pm2.
+
 # Configuring the Machine.
 
 If you are using nginx , create a proxy pass for it. You just need to open the port 8080 for communication.
