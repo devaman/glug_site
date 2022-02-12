@@ -4,7 +4,7 @@ Recently I was working on one of my projects built using nextjs . I was using se
 
 ## What is needed on the prod server?
 
-We need a reverse proxy. I was using NGINX. 
+We need a reverse proxy. I was using NGINX.  If we are serving static file from Nodejs server (express or koa) then we need to configure our nodejs server to serve gzip first if client browser supports gzip else server simple file
 
 
 ## Steps
@@ -71,7 +71,7 @@ module.exports = {
 4. Now you only have to configure your NGINX Reverse proxy to serve .gz file first.
 
 ### Step 2
-
+#### NGINX 
 1. Run vim_etc_nginx_sites-available_default .
 2. Add the below code in your server.
 
@@ -90,3 +90,7 @@ module.exports = {
 
 3. Now restart NGINX `sudo systemctl restart nginx`.
 4. Thats it you are done !
+
+####  Nodejs server
+- In Express js  we use `app.use(express.static('public'))`. It only serves uncompressed files..To serve Compressed gzip file first we need to use [express-static-gzip](https://www.npmjs.com/package/express-static-gzip)
+- In Koa js , by default koa-static try to serve gzip file first.
